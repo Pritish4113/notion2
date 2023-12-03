@@ -1,0 +1,74 @@
+.text{
+    display: none;
+}
+.content:hover>.hello>.text{
+display: block;
+}
+.content:hover>.hello>.text>.text{
+display: block;
+}
+.text::before{
+    display: none;
+}
+.text::after{
+    display: block;
+}
+
+ .slider {
+      position: relative;
+      width: 100%;
+      max-width: 600px;
+      margin: auto;
+      overflow: hidden;
+    }
+
+    .slides {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+    }
+
+    .slide {
+      min-width: 100%;
+    }
+
+    /* Optional: Add styling for navigation buttons */
+    .prev,
+    .next {
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      width: auto;
+      margin-top: -25px;
+      padding: 16px;
+      color: white;
+      font-weight: bold;
+      font-size: 20px;
+      transition: 0.6s ease;
+      border-radius: 0 3px 3px 0;
+      user-select: none;
+    }
+
+    .next {
+      right: 0;
+      border-radius: 3px 0 0 3px;
+    }
+
+    /* Optional: Add styling for dots (indicators) */
+    .dot-container {
+      text-align: center;
+      padding: 20px;
+    }
+
+    .dot {
+      height: 15px;
+      width: 15px;
+      margin: 0 2px;
+      background-color: #bbb;
+      border-radius: 50%;
+      display: inline-block;
+      transition: background-color 0.6s ease;
+    }
+
+    .active-dot {
+      background-color: #717171;
+    }

@@ -1,0 +1,986 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.compat.min.css"
+    integrity="sha512-b42SanD3pNHoihKwgABd18JUZ2g9j423/frxIP5/gtYgfBz/0nDHGdY/3hi+3JwhSckM3JLklQ/T6tJmV7mZEw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <title>Document</title>
+</head>
+   <nav class="p-4 flex items-center h-[65px] text-black border-b-[1.5px] sticky top-0 bg-white z-50 justify-between">
+    <div class="flex mt-[3px]">
+       <!-- Logo on the left side -->
+       <div class="flex items-center">
+        <img src="./assets/pngwing.com.png" alt="Logo" class=" w-24 mr-5 mt-[-9px]">
+      </div>
+    
+      <!-- Navigation links -->
+      <div class="relative group mr-4 hover:bg-[#F0F0F0] p-2 rounded-md">
+        <button id="productsDropdown" class="focus:outline-none">Product <i class="fas fa-caret-down"></i></button>
+        <div id="productsDropdownContent" class="absolute hidden bg-white text-black py-2 mt-2 rounded shadow-lg">
+          <div class="flex">
+            <div class="flex flex-col">
+              <a href="#" class="block px-4 py-2 w-40">Wikis</a>
+            <a href="#" class="block px-4 py-2 w-40">Projects</a>
+            <a href="#" class="block px-4 py-2 w-40">Docs</a>
+            <a href="#" class="block px-4 py-2 w-40">Notion AI</a>
+            </div>
+            <div class="flex flex-col">
+              <a href="#" class="block px-4 py-2 w-40">Template Gallery</a>
+            <a href="#" class="block px-4 py-2 w-40">Customer Stories</a>
+            <a href="#" class="block px-4 py-2 w-40">Connections</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+        <!-- Dropdown menu -->
+        <div class="relative group mr-4 hover:bg-[#F0F0F0] p-2 rounded-md">
+          <button id="servicesDropdown" class="focus:outline-none">Download <i class="fas fa-caret-down"></i></button>
+          <div id="servicesDropdownContent" class="absolute hidden bg-white text-black py-2 mt-2 rounded shadow-lg">
+            <a href="#" class="block px-4 py-2 w-40">IOS & Android</a>
+            <a href="#" class="block px-4 py-2 w-40">Mac & Windows</a>
+            <a href="#" class="block px-4 py-2 w-40">Web Clipper</a>
+          </div>
+        </div>
+    
+        <div class="relative group mr-4 hover:bg-[#F0F0F0] p-2 rounded-md">
+          <button id="solutionsDropdown" class="focus:outline-none">Solutions <i class="fas fa-caret-down"></i></button>
+          <div id="solutionsDropdownContent" class="absolute hidden bg-white text-black py-2 mt-2 rounded shadow-lg">
+            <div class="flex">
+              <div class="flex flex-col">
+                <a href="#" class="block px-4 py-2 w-40">Enterprise</a>
+              <a href="#" class="block px-4 py-2 w-40">Small Business</a>
+              <a href="#" class="block px-4 py-2 w-40">Personal</a>
+              </div>
+              <div class="flex flex-col">
+                <a href="#" class="block px-4 py-2 w-40">Design</a>
+              <a href="#" class="block px-4 py-2 w-40">Engineering</a>
+              <a href="#" class="block px-4 py-2 w-40">Product</a>
+              <a href="#" class="block px-4 py-2 w-40">Managers</a>
+              </div>
+              <div class="flex flex-col">
+                <a href="#" class="block px-4 py-2 w-40">Startups</a>
+              <a href="#" class="block px-4 py-2 w-40">Remote Work</a>
+              <a href="#" class="block px-4 py-2 w-40">Education</a>
+              <a href="#" class="block px-4 py-2 w-40">Nonprofits</a>
+              </div>
+            </div>
+          </div>
+        </div>        
+        
+        <div class="relative group mr-4 hover:bg-[#F0F0F0] p-2 rounded-md">
+          <button id="resourcesDropdown" class="focus:outline-none">Resources <i class="fas fa-caret-down"></i></button>
+          <div id="resourcesDropdownContent" class="absolute hidden bg-white text-black py-2 mt-2 rounded shadow-lg">
+            <a href="#" class="block px-4 py-2 w-40">Blogs</a>
+            <a href="#" class="block px-4 py-2 w-40">Guides & tutorials</a>
+            <a href="#" class="block px-4 py-2 w-40">Webinars</a>
+            <a href="#" class="block px-4 py-2 w-40">Help centers</a>
+            <a href="#" class="block px-4 py-2 w-40">API docs</a>
+            <a href="#" class="block px-4 py-2 w-40">Community</a>
+            <a href="#" class="block px-4 py-2 w-40">Hire a consultant</a>
+          </div>
+        </div>
+        <a href="#" class="text-black hover:bg-[#F0F0F0] p-2 rounded-md">Pricing</a>
+      </div>
+    </div>
+    <div>
+      <a href="#" class="text-black hover:bg-[#F0F0F0] p-2 rounded-md">Request a demo</a>
+      <a href="#" class="text-black hover:bg-[#F0F0F0] p-2 rounded-md">Log in</a>
+      <button
+      class="w-[126px] bg-black text-white h-[35px] text-[15px] rounded-md hover:bg-[#525252] font-semibold ml-2"
+    >
+      <div>Get Notion Free</div>
+    </button>
+  
+  </div>
+    </nav>
+
+  <div class="leading-[70px] p-6 font-bold font-serif text-center text-[58px] font-serif">
+    Write, plan, share. <br />With AI at your side.
+  </div>
+  <div class="font-serif text-center text-[25px] font-medium">
+    Notion is the connected workspace where better, faster work happens.
+  </div>
+  <div class="text-center flex align-center justify-center mt-5">
+    <button class="p-2 w-[150px] bg-black text-white h-[40px] text-[15px] rounded-md flex flex-row hover:bg-[#525252]">
+      <div>Get Notion Free</div>
+      <div>
+        <img src="./assets/right-arrow.png" class="w-[15px] h-[15px] mt-1 ml-2" alt="" />
+      </div>
+    </button>
+  </div>
+  <div class="flex justify-center items-center mt-10">
+    <img src="./assets/home-hero.webp" class="w-[640px] mt-5" alt="" />
+  </div>
+
+  <!-- Animation -->
+
+  <!-- <div class="flex align-center justify-center">
+      <img
+        src="./assets/image3-anim2.jpg"
+        class="w-[68vw] rounded-lg shadow-md"
+        alt=""
+      />
+    </div>
+    <div class="flex align-center hidden justify-center">
+      <img
+        src="./assets/image3-anim2.jpg"
+        class="w-[68vw] rounded-lg shadow-md"
+        alt=""
+      />
+    </div>
+    <div class="flex align-center hidden justify-center">
+      <img
+        src="./assets/image3-anim2.jpg"
+        class="w-[68vw] rounded-lg shadow-md"
+        alt=""
+      />
+    </div>
+    <div class="flex align-center hidden justify-center">
+      <img
+        src="./assets/image3-anim2.jpg"
+        class="w-[68vw] rounded-lg shadow-md"
+        alt=""
+      />
+    </div> -->
+
+  <div class="font-sans flex flex-col items-center mt-10">
+    <div class="flex">
+      <div class="cursor-pointer transition-transform transform" onclick="showImage1('./assets/anim1.jpg')">
+        <div
+          class="content flex align-center shadow-md flex-col hover:bg-[#F4F1F1] w-[240px] h-[155px] cursor-pointer rounded-md mx-2">
+          <div class="w-[230px] rounded-md flex h-[200px]">
+            <img src="./assets/star.jpg" class="w-[35px] rounded-md h-[35px] m-4" alt="" />
+            <div class="mt-[10px] font-bold font-serif text-[30px]">AI</div>
+            <div class="mt-[22px] text-[#5E2BC8] text-[12px] rounded-md bg-[#B5A2DC] h-[25px] px-2 pt-1 mx-1">
+              Now with Q&A
+            </div>
+          </div>
+          <div class="hello mx-4 mt-1 font-serif text-[13px]">
+            Ask literally anything. Notion will answer
+            <div class="text text-[#5E2BC8]">Learn More</div>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="flex align-center shadow-md flex-col hover:bg-[#F4F1F1] w-[240px] h-[155px] cursor-pointer rounded-md mx-2 transition-transform transform"
+        onclick="showImage1('./assets/anim12.jpg')">
+        <div
+          class="content flex align-center shadow-md flex-col hover:bg-[#F4F1F1] w-[240px] h-[155px] cursor-pointer rounded-md">
+          <div class="w-[230px] rounded-md flex h-[200px]">
+            <img src="./assets/wiki.jpg" class="w-[35px] rounded-md h-[35px] m-4" alt="" />
+            <div class="mt-[10px] font-bold font-serif text-[30px]">
+              Wikis
+            </div>
+          </div>
+          <div class="hello mx-4 mt-1 font-serif text-[13px]">
+            Centralize your knowledge. No more hunting for answers
+            <div class="text text-[red]">Learn More</div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="flex align-center shadow-md flex-col hover:bg-[#F4F1F1] w-[240px] h-[155px] cursor-pointer rounded-md mx-2 transition-transform transform"
+        onclick="showImage1('./assets/anim13.jpg')">
+        <div
+          class="content flex align-center shadow-md flex-col hover:bg-[#F4F1F1] w-[240px] h-[155px] cursor-pointer rounded-md">
+          <div class="w-[230px] rounded-md flex h-[200px]">
+            <img src="./assets/project.jpg" class="w-[35px] rounded-md h-[35px] m-4" alt="" />
+            <div class="mt-[10px] font-bold font-serif text-[30px]">
+              Projects
+            </div>
+          </div>
+          <div class="hello mx-4 mt-1 font-serif text-[13px]">
+            Manage complex projects without chaos.
+            <div class="text text-[red]">Learn More</div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="flex align-center shadow-md flex-col hover:bg-[#F4F1F1] w-[240px] h-[155px] cursor-pointer rounded-md mx-2 transition-transform transform"
+        onclick="showImage1('./assets/anim14.jpg')">
+        <div
+          class="content flex align-center shadow-md flex-col hover:bg-[#F4F1F1] w-[240px] h-[155px] cursor-pointer rounded-md">
+          <div class="w-[230px] rounded-md flex h-[200px]">
+            <img src="./assets/doc.jpg" class="w-[35px] rounded-md h-[35px] m-4" alt="" />
+            <div class="mt-[10px] font-bold font-serif text-[30px]">Docs</div>
+          </div>
+          <div class="hello mx-4 mt-1 font-serif text-[13px]">
+            Simple, powerful, beautiful. Next gen notes & docs.
+            <div class="text text-[red]">Learn More</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="mt-8">
+      <img id="displayed-image1" src="" alt="Displayed Image"
+        class="max-w-full h-[630px] border-2 border-gray-300 shadow-lg rounded-lg transform -translate-y-4" />
+    </div>
+  </div>
+
+
+  <!-- Animation Complete -->
+
+  <div class="text-center text-[42px] font-serif font-medium mt-[100px]">
+    Millions run on Notion every day
+  </div>
+  <div class="text-center text-[16px] font-serif">
+    Powering the world’s best teams, from next-generation startups<br />
+    to established enterprises.
+  </div>
+  <div class="justify-center align-center flex text-[#15B4EB] mt-4 font-medium hover:underline cursor-pointer">
+    <div>Read customer Stories</div>
+    <div>
+      <img src="./assets/arrow.jpg" class="w-[25px] h-[15px] mt-[6px]" alt="" />
+    </div>
+  </div>
+  <div class="flex justify-center align-center my-10">
+    <img src="./assets/logo2.jpg" class="w-[880px]" alt="" />
+  </div>
+
+  <div class="flex justify-center align-center font-serif font-semibold">
+    <div class="text-[36px] text-center pt-10">
+      Consolidate tools.<br />
+      Cut costs.
+    </div>
+    <img src="./assets/bndaa.webp" alt="" />
+  </div>
+  <div class="flex justify-center align-center">
+    <img src="./assets/logo.jpg" class="w-[640px]" />
+  </div>
+
+  <div class="text-center mt-10">
+    <div class="font-serif text-[40px]">
+      "We got rid of nearly a dozen different tools because of <br />
+      what Notion does for us."
+    </div>
+  </div>
+  <div class="flex align-center justify-center mt-3">
+    <img src="./assets/metalab.webp" class="w-[200px]" alt="" />
+    <div class="font-serif ml-2">
+      <div class="font-semibold">Justin Watt</div>
+      <div>Director of Ops & Marketing, MetaLab</div>
+    </div>
+  </div>
+
+  <div class="flex align-center justify-center mt-3">
+    <div>
+      <img src="./assets/jhakna.avif" class="w-[400px] z-50" alt="" />
+    </div>
+    <div class="flex align-center justify-center pt-[180px] font-sans font-semibold text-[50px]">
+      Powerful building blocks
+    </div>
+  </div>
+  <div class="flex flex-col items-center justify-center pb-5 mb-5">
+    <div class="w-[68vw] bg-[#F3EFF7] rounded-lg">
+      <img src="./assets/crossarrow.jpeg" class="w-[35px] h-[35px] m-3" alt="" />
+      <div class="m-5 px-5 font-bold font-serif text-[20px]">
+        Visualize, filter & sort any way you want
+      </div>
+      <div class="m-5 px-5 font-serif text-[20px]">
+        Show only tasks assigned to you, or items marked as urgent. Break
+        <br />down any project in the way that’s most helpful to you.
+      </div>
+      <!-- Animation2 -->
+    
+      <div class="font-sans flex flex-col items-center">
+        <div class=" px-4">
+          <img id="displayed-images" src="" alt="Displayed Image"
+            class="max-w-full h-[630px] rounded-lg border-2 border-gray-300 shadow-lg transform -translate-y-4" />
+        </div>
+        <div class="flex">
+          <button class="mx-2 mb-5 px-2 shadow-md rounded-md hover:bg-[#E4DFE9]"
+            onclick="showImage2('./assets/board.jpg')">
+            Board
+          </button>
+          <button class="mx-2 mb-5 px-2 shadow-md rounded-md hover:bg-[#E4DFE9]"
+            onclick="showImage2('./assets/table.jpg')">
+            Table
+          </button>
+          <button class="mx-2 mb-5 px-2 shadow-md rounded-md hover:bg-[#E4DFE9]"
+            onclick="showImage2('./assets/timeline.jpg')">
+            Timeline
+          </button>
+          <button class="mx-2 mb-5 px-2 shadow-md rounded-md hover:bg-[#E4DFE9]"
+            onclick="showImage2('./assets/calender.jpg')">
+            Calender
+          </button>
+          <button class="mx-2 mb-5 px-2 shadow-md rounded-md hover:bg-[#E4DFE9]"
+            onclick="showImage2('./assets/gallery.jpg')">
+            Gallery
+          </button>
+          <button class="mx-2 mb-5 px-2 shadow-md rounded-md hover:bg-[#E4DFE9]"
+            onclick="showImage2('./assets/list.jpg')">
+            List
+          </button>
+        </div>
+      </div>
+    
+    
+      <!-- Complete -->
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+  <div class="flex align-center justify-center">
+    <div class="bg-[#E4DFE9] m-5 rounded-lg">
+      <div>
+        <img src="./assets/eye.jpeg" class="w-[35px] rounded-lg m-3" alt="" />
+      </div>
+      <div class="ml-5 my-2 font-medium">Customize the info you track</div>
+      <div class="ml-5">
+        Create your own labels, tags, owners, and more, so <br />everyone has
+        context and everything stays organized.
+      </div>
+      <img src="./assets/image1.webp" class="w-[33vw] pb-8" alt="" />
+    </div>
+    <div class="bg-[#E4DFE9] m-5 rounded-lg">
+      <div>
+        <img src="./assets/paint.jpeg" class="w-[35px] rounded-lg m-3" alt="" />
+      </div>
+      <div class="ml-5 my-2 font-medium">
+        Build any page, communicate any idea
+      </div>
+      <div class="ml-5">
+        Everything is drag and drop in Notion — images,<br />
+        toggles, to-do’s, even embedded databases.
+      </div>
+      <img src="./assets/image2.webp" class="w-[33vw] pb-8" alt="" />
+    </div>
+  </div>
+  <div class="items-center justify-center flex flex-col text-[35px] font-serif">
+    <div>"Notion adapts to your needs. It’s as minimal or as powerful as</div>
+    <div>you need it to be."</div>
+    <div class="flex align-center justify-center">
+      <img src="./assets/lit.webp" class="w-[40px] h-[40px]" alt="" />
+      <div class="text-[15px] ml-3 mt-3">
+        <div class="font-semibold font-serif">Rahim Makani</div>
+        <div class="font-serif">Director of Product, Matchgroup</div>
+      </div>
+    </div>
+  </div>
+
+
+<!-- Part2 -->
+<div class="flex justify-center align-center font-serif font-semibold">
+  <div class="text-[36px] text-center pt-10">
+    Consolidate tools.<br />
+    Cut costs.
+  </div>
+  <img src="./assets/bndaa.webp" alt="" />
+</div>
+<div class="flex justify-center align-center">
+  <img src="./assets/logo.jpg" class="w-[640px]" />
+</div>
+<div
+  class="text-center text-[42px] text-sans font-medium mt-[80px] flex flex-col"
+>
+  <span>Every team, side-by-side</span>
+</div>
+<div class="font-sans flex flex-col items-center">
+  <div class="flex">
+    <div
+    class="card m-4 p-6 border rounded-2xl cursor-pointer transition-transform transform hover:scale-105 h-[130px] w-[160px] flex flex-col justify-center align-center bg-[#F4F1F1]"
+    onclick="showImage('./assets/engineering.png')"
+  >
+  <img src="./assets/engineeringlogo.png" class="w-[75px] ml-4" alt="" />
+  <p class="font-semibold ml-3">Engineering</p>
+  </div>
+
+  <div
+    class="card m-4 p-6 border rounded-2xl cursor-pointer transition-transform transform hover:scale-105 w-[160px] h-[130px] flex flex-col justify-center align-center bg-[#F4F1F1]"
+    onclick="showImage('./assets/design.png')"
+  >
+  <img src="./assets/desingloog.png" class="w-[75px] ml-4" alt="" />
+  <p class="font-semibold ml-7">Design</p>      </div>
+
+  <div
+    class="card m-4 p-6 border rounded-2xl cursor-pointer transition-transform transform hover:scale-105 w-[160px] h-[130px] flex flex-col justify-center align-center bg-[#F4F1F1]"
+    onclick="showImage('./assets/product.png')"
+  >
+  <img src="./assets/productlogo.png" class="w-[75px] ml-4" alt="" />
+  <p class="font-semibold ml-6">Product</p>      </div>
+
+  <div
+    class="card m-4 p-6 border rounded-2xl cursor-pointer transition-transform transform hover:scale-105 w-[160px] h-[130px] flex flex-col justify-center align-center bg-[#F4F1F1]"
+    onclick="showImage('./assets/marketing.png')"
+  >
+  <img src="./assets/marketinglogo.png" class="w-[75px] ml-4" alt="" />
+  <p class="font-semibold ml-5">Marketing</p>      </div>
+
+  <div
+    class="card m-4 p-6 border rounded-2xl cursor-pointer transition-transform transform hover:scale-105 w-[160px] h-[130px] flex flex-col justify-center align-center bg-[#F4F1F1]"
+    onclick="showImage('./assets/opeations.png')"
+  >
+  <img src="./assets/operations.logo.png" class="w-[75px] ml-4" alt="" />
+  <p class="font-semibold ml-4">Operations</p>      </div>
+
+  <div
+    class="card m-4 p-6 border rounded-2xl cursor-pointer transition-transform transform hover:scale-105 w-[160px] h-[130px] flex flex-col justify-center align-center bg-[#F4F1F1]"
+    onclick="showImage('./assets/hr.png')"
+  >
+  <img src="./assets/hrlogo.png" class="w-[75px] ml-4" alt="" />
+  <p class="font-semibold ml-11">HR</p>      </div>
+  </div>
+
+  <div class="mt-8">
+    <img
+      id="displayed-image"
+      src=""
+      alt="Displayed Image"
+      class="max-w-full h-[630px] border-2 border-gray-300 shadow-lg transform -translate-y-4"
+    />
+  </div>
+</div>
+<div
+  class="text-center text-[42px] text-sans font-medium mt-[80px] flex flex-col"
+>
+  <span>Join a global movement.</span>
+  <span>unleash your creativity</span>
+</div>
+<div class="text-center text-[16px] text-sans">
+  Our vibrant community produces content, teaches courses, and leads events
+  all over the world.
+</div>
+<div
+  class="justify-center align-center flex text-[#15B4EB] mt-4 font-medium hover:underline cursor-pointer"
+>
+  <div>Learn more</div>
+  <div>
+    <img
+      src="./assets/bluearrow.jpg"
+      class="w-[25px] h-[15px] mt-[6px]"
+      alt=""
+    />
+  </div>
+</div>
+<div class="flex justify-center align-center">
+  <img src="./assets/avatars.webp" class="w-[880px]" alt="" />
+</div>
+
+<div class="flex flex-col justify-center align-center">
+  <div class="flex justify-center align-center">
+    <div
+      class="bg-[#F4F1F1] w-[320px] h-[140px] m-2 rounded-md flex flex-col justify-center pl-8"
+    >
+      <div class="font-bold text-6xl text-sans text-[#0a85d1]">1M+</div>
+      <div class="text-md text-sans mt-1">community members</div>
+    </div>
+    <div
+      class="bg-[#F4F1F1] w-[320px] h-[140px] m-2 rounded-md flex flex-col justify-center pl-8"
+    >
+      <div class="font-bold text-6xl text-sans text-[#0a85d1]">150+</div>
+      <div class="text-md text-sans mt-1">community groups</div>
+    </div>
+    <div
+      class="bg-[#F4F1F1] w-[320px] h-[140px] m-2 rounded-md flex flex-col justify-center pl-8"
+    >
+      <div class="font-bold text-6xl text-sans text-[#0a85d1]">50+</div>
+      <div class="text-md text-sans mt-1">countries represented</div>
+    </div>
+  </div>
+  <div class="flex justify-center align-center">
+    <div
+      class="bg-[#F4F1F1] w-[487px] h-[420px] m-2 rounded-md flex flex-col justify-center pl-8"
+    >
+      <div class="text-lg text-sans mt-8 flex flex-col">
+        <span class="font-bold">An always-on support network</span>
+        <span
+          >Swap setups and share tips in over 149 online communities.</span
+        >
+      </div>
+      <img src="./assets/apps.webp" class="w-[280px] mt-10" />
+    </div>
+    <div
+      class="bg-[#F4F1F1] w-[487px] h-[420px] m-2 rounded-md flex flex-col justify-center pl-8"
+    >
+      <div class="text-lg text-sans mt-8 flex flex-col">
+        <span class="font-bold">Choose your language</span>
+        <span
+          >Notion currently supports English, Korean, Japanese, French,
+          German, Spanish, and Portuguese. With more to come!</span
+        >
+      </div>
+      <img src="./assets/kang.webp" class="w-[480px] mt-14" />
+    </div>
+  </div>
+  <div class="flex justify-center align-center">
+    <div
+      class="bg-[#F4F1F1] w-[640px] h-[660px] m-2 rounded-md flex flex-col justify-center pl-8"
+    >
+      <div class="slider">
+        <div class="slides mt-10">
+          <div class="slide">
+            <img
+              src="./assets/ss1.png"
+              alt="Slide 1"
+              class="w-[510px] ml-6"
+            />
+          </div>
+          <div class="slide">
+            <img
+              src="./assets/ss2.png"
+              alt="Slide 2"
+              class="w-[510px] ml-6"
+            />
+          </div>
+          <div class="slide">
+            <img
+              src="./assets/ss3.png"
+              alt="Slide 3"
+              class="w-[510px] ml-6"
+            />
+          </div>
+          <div class="slide">
+            <img
+              src="./assets/ss4.png"
+              alt="Slide 4"
+              class="w-[510px] ml-6"
+            />
+          </div>
+        </div>
+
+        <div class="prev bg-white text-black ml-9" onclick="prevSlide()">
+          &#10094;
+        </div>
+        <div class="next bg-white text-black mr-20" onclick="nextSlide()">
+          &#10095;
+        </div>
+
+        <div class="dot-container mt-10">
+          <span class="dot" onclick="currentSlide(1)"></span>
+          <span class="dot" onclick="currentSlide(2)"></span>
+          <span class="dot" onclick="currentSlide(3)"></span>
+          <span class="dot" onclick="currentSlide(4)"></span>
+        </div>
+      </div>
+    </div>
+    <div class="flex flex-col justify-center align-center">
+      <div
+        class="bg-[#F4F1F1] w-[333px] h-[230px] m-2 rounded-md flex flex-col px-4 pt-4"
+      >
+        <div class="text-lg text-sans flex flex-col">
+          <div class="flex align-center">
+            <img src="./assets/pp1.avif" class="w-[50px] mr-2" />
+            <div class="flex flex-col justify-center align-center">
+              <span class="text-base font-bold">Deborah Mecca</span>
+              <span class="text-base text-[#4d4d4d]">@DebMecca</span>
+            </div>
+          </div>
+          <span class="text-base mt-5"
+            >I used to HATE documenting things. And then I started using
+            <span class="text-[#1b95e0]">@NotionHQ</span> and I document a
+            lot. A LOT A LOT. Now I just realize that it wasn't that I hated
+            documenting, I just hated Google Docs.</span
+          >
+        </div>
+      </div>
+      <div
+        class="bg-[#F4F1F1] w-[333px] h-[198px] m-2 rounded-md flex flex-col px-4 pt-4"
+      >
+        <div class="text-lg text-sans flex flex-col">
+          <div class="flex align-center">
+            <img src="./assets/pp2.png" class="w-[50px] mr-2" />
+            <div class="flex flex-col justify-center align-center">
+              <span class="text-base font-bold">André Blackman</span>
+              <span class="text-base text-[#4d4d4d]">@mindofandre</span>
+            </div>
+          </div>
+          <span class="text-base mt-5"
+            >One of the most incredible things about
+            <span class="text-[#1b95e0]">@NotionHQ</span> is the dynamic
+            community being built - creating and sharing at its best.</span
+          >
+        </div>
+      </div>
+      <div
+        class="bg-[#F4F1F1] w-[333px] h-[198px] m-2 rounded-md flex flex-col px-4 pt-4"
+      >
+        <div class="text-lg text-sans flex flex-col">
+          <div class="flex align-center">
+            <img src="./assets/pp3.png" class="w-[50px] mr-2" />
+            <div class="flex flex-col justify-center align-center">
+              <span class="text-base font-bold">Oliver Peyre</span>
+              <span class="text-base text-[#4d4d4d]">@opeyre</span>
+            </div>
+          </div>
+          <span class="text-base mt-5"
+            ><span class="text-[#1b95e0]">@NotionHQ</span> Truly impressed
+            by the velocity and quality of your work. Making using Notion
+            even more fun week after week!</span
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="text-center text-[55px] text-sans font-bold mt-20">
+  Endless ways to use it
+</div>
+<div
+  class="justify-center align-center flex text-[#15B4EB] mt-4 font-medium hover:underline cursor-pointer"
+>
+  <div>Browse all Templates</div>
+  <div>
+    <img
+      src="./assets/bluearrow.jpg"
+      class="w-[25px] h-[15px] mt-[6px]"
+      alt=""
+    />
+  </div>
+</div>
+<div class="flex justify-center align-center">
+  <div
+    class="bg-[#F4F1F1] w-[500px] h-[660px] m-2 rounded-md flex flex-col pl-8 mt-6"
+  >
+    <div class="text-lg text-sans mt-8 flex flex-col">
+      <img src="./assets/home.png" class="w-[25px] mr-2 ml-1" />
+      <span class="font-semibold mt-6 ml-1">Company Wiki</span>
+      <div
+        class="ml-1 align-center flex text-[#15B4EB] mt-5 font-medium hover:underline cursor-pointer"
+      >
+        <div class="text-[17px]">Get template</div>
+        <div>
+          <img
+            src="./assets/bluearrow.jpg"
+            class="w-[25px] h-[15px] mt-[6px]"
+            alt=""
+          />
+        </div>
+      </div>
+    </div>
+    <img src="./assets/homeimage.webp" class="w-[500px] mt-36 rounded-xl" />
+  </div>
+  <div class="flex flex-col justify-center align-center mt-3">
+    <div
+      class="bg-[#F4F1F1] w-[220px] h-[200px] m-3 rounded-md flex flex-col px-4 pt-4"
+    >
+      <div class="text-lg text-sans flex flex-col">
+        <div class="flex align-center mt-3">
+          <img src="./assets/flag.png" class="w-[35px] mr-2 ml-1" />
+        </div>
+        <span class="text-md mt-4 font-semibold ml-2">Product Roadmap</span>
+        <div
+          class="ml-2 align-center flex text-[#15B4EB] mt-4 font-medium hover:underline cursor-pointer"
+        >
+          <div class="text-[17px]">Get template</div>
+          <div>
+            <img
+              src="./assets/bluearrow.jpg"
+              class="w-[25px] h-[15px] mt-[6px]"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="bg-[#F4F1F1] w-[220px] h-[200px] m-3 rounded-md flex flex-col px-4 pt-4"
+    >
+      <div class="text-lg text-sans flex flex-col">
+        <div class="flex align-center mt-3">
+          <img src="./assets/calender.png" class="w-[32px] mr-2 ml-1" />
+        </div>
+        <span class="text-md mt-3 font-semibold ml-2">Meeting Notes</span>
+        <div
+          class="ml-2 align-center flex text-[#15B4EB] mt-4 font-medium hover:underline cursor-pointer"
+        >
+          <div class="text-[17px]">Get template</div>
+          <div>
+            <img
+              src="./assets/bluearrow.jpg"
+              class="w-[25px] h-[15px] mt-[6px]"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="bg-[#F4F1F1] w-[220px] h-[200px] m-3 rounded-md flex flex-col px-4 pt-4"
+    >
+      <div class="text-lg text-sans flex flex-col">
+        <div class="flex align-center mt-3">
+          <img src="./assets/calndergreen.png" class="w-[34px] mr-2 ml-1" />
+        </div>
+        <span class="text-md mt-4 font-semibold ml-2"
+          >Editorial Calender</span
+        >
+        <div
+          class="ml-2 align-center flex text-[#15B4EB] mt-4 font-medium hover:underline cursor-pointer"
+        >
+          <div class="text-[17px]">Get template</div>
+          <div>
+            <img
+              src="./assets/bluearrow.jpg"
+              class="w-[25px] h-[15px] mt-[6px]"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="flex flex-col justify-center align-center mt-3">
+    <div
+      class="bg-[#F4F1F1] w-[220px] h-[200px] m-3 rounded-md flex flex-col px-4 pt-4"
+    >
+    <img src="./assets/OKSkids.png" alt="" class="mt-[-137px]">
+      <div class="text-lg text-sans flex flex-col mt-[-47px]">
+        <div class="flex align-center mt-3">
+          <img src="./assets/tickorange.png" class="w-[30px] mr-2 ml-1" />
+        </div>
+        <span class="text-md mt-5 font-semibold ml-2">OKRs</span>
+        <div
+          class="ml-2 align-center flex text-[#15B4EB] mt-4 font-medium hover:underline cursor-pointer"
+        >
+          <div class="text-[17px]">Get template</div>
+          <div>
+            <img
+              src="./assets/bluearrow.jpg"
+              class="w-[25px] h-[15px] mt-[6px]"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="bg-[#F4F1F1] w-[220px] h-[200px] m-3 rounded-md flex flex-col px-4 pt-4"
+    >
+      <div class="text-lg text-sans flex flex-col">
+        <div class="flex align-center mt-3">
+          <img src="./assets/plane.png" class="w-[32px] mr-2 ml-1" />
+        </div>
+        <span class="text-md mt-5 font-semibold ml-2"
+          >Vacation Planner</span
+        >
+        <div
+          class="ml-2 align-center flex text-[#15B4EB] mt-4 font-medium hover:underline cursor-pointer"
+        >
+          <div class="text-[17px]">Get templates</div>
+          <div>
+            <img
+              src="./assets/bluearrow.jpg"
+              class="w-[25px] h-[15px] mt-[6px]"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="bg-[#F4F1F1] w-[220px] h-[200px] m-3 rounded-md flex flex-col px-4 pt-4"
+    >
+      <div class="text-lg text-sans flex flex-col">
+        <div class="flex align-center mt-3">
+          <img src="./assets/tracker.png" class="w-[28px] mr-2 ml-1" />
+        </div>
+        <span class="text-md mt-5 font-semibold ml-2">Habit Tracker</span>
+        <div
+          class="ml-2 align-center flex text-[#15B4EB] mt-4 font-medium hover:underline cursor-pointer"
+        >
+          <div class="text-[17px]">Get template</div>
+          <div>
+            <img
+              src="./assets/bluearrow.jpg"
+              class="w-[25px] h-[15px] mt-[6px]"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div
+  class="leading-[70px] p-6 font-bold text-sans text-center text-[58px] font-sans"
+>
+  Get started for free
+</div>
+<div class="text-sans text-center text-lg font-medium">
+  Play around with it first. Pay and add your team later.
+</div>
+<div class="flex justify-center align-center mt-6">
+  <button
+    class="p-2 w-[130px] bg-black text-white h-[40px] text-[15px] rounded-md hover:bg-[#525252]"
+  >
+    <div>Try Notion Free</div>
+  </button>
+  <div
+    class="justify-center align-center flex text-[#15B4EB] font-medium hover:underline cursor-pointer mt-2 ml-4"
+  >
+    <div>Request a demo</div>
+    <div>
+      <img
+        src="./assets/bluearrow.jpg"
+        class="w-[25px] h-[15px] mt-[6px]"
+        alt=""
+      />
+    </div>
+  </div>
+</div>
+<div class="flex justify-center items-center">
+  <img src="./assets/end.webp" class="w-[640px] mt-5" alt="" />
+</div>
+
+
+
+  </body>
+
+  <script>
+    let currentSlideIndex = 1;
+
+    function showSlides(index) {
+      const slides = document.querySelector(".slides");
+      const dots = document.querySelectorAll(".dot");
+
+      if (index > slides.children.length) {
+        currentSlideIndex = 1;
+      }
+
+      if (index < 1) {
+        currentSlideIndex = slides.children.length;
+      }
+
+      for (let i = 0; i < slides.children.length; i++) {
+        slides.children[i].style.display = "none";
+      }
+
+      for (let i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active-dot", "");
+      }
+
+      slides.children[currentSlideIndex - 1].style.display = "block";
+      dots[currentSlideIndex - 1].className += " active-dot";
+    }
+
+    function nextSlide() {
+      showSlides((currentSlideIndex += 1));
+    }
+
+    function prevSlide() {
+      showSlides((currentSlideIndex -= 1));
+    }
+
+    function currentSlide(index) {
+      showSlides((currentSlideIndex = index));
+    }
+
+    document.addEventListener('DOMContentLoaded', function () {
+        let displayedImage = document.getElementById('displayed-image');
+        displayedImage.src = './assets/engineering.png';
+    });
+
+    function showImage(imagePath) {
+        let displayedImage = document.getElementById('displayed-image');
+        displayedImage.src = imagePath;
+    }
+
+    document.addEventListener("DOMContentLoaded", function () {
+      let displayedImage = document.getElementById("displayed-image1");
+      displayedImage.src = "./assets/engineering.png";
+    });
+
+    function showImage1(imagePath) {
+      let displayedImage1 = document.getElementById("displayed-image1");
+      displayedImage1.src = imagePath;
+    }
+    document.addEventListener("DOMContentLoaded", function () {
+      let displayedImage = document.getElementById("displayed-images");
+      displayedImage.src = "./assets/board.jpg";
+    });
+
+    function showImage2(imagePath) {
+      let displayedImages = document.getElementById("displayed-images");
+      displayedImages.src = imagePath;
+    }
+
+    document
+      .getElementById("servicesDropdown")
+      .addEventListener("click", function () {
+        var dropdownContent = document.getElementById(
+          "servicesDropdownContent"
+        );
+        dropdownContent.classList.toggle("hidden");
+      });
+
+    window.addEventListener("click", function (event) {
+      var dropdownContent = document.getElementById("servicesDropdownContent");
+      if (!event.target.matches("#servicesDropdown")) {
+        if (!dropdownContent.classList.contains("hidden")) {
+          dropdownContent.classList.add("hidden");
+        }
+      }
+    });
+    document
+      .getElementById("productsDropdown")
+      .addEventListener("click", function () {
+        var dropdownContent = document.getElementById(
+          "productsDropdownContent"
+        );
+        dropdownContent.classList.toggle("hidden");
+      });
+
+    window.addEventListener("click", function (event) {
+      var dropdownContent = document.getElementById("productsDropdownContent");
+      if (!event.target.matches("#productsDropdown")) {
+        if (!dropdownContent.classList.contains("hidden")) {
+          dropdownContent.classList.add("hidden");
+        }
+      }
+    });
+    document
+      .getElementById("solutionsDropdown")
+      .addEventListener("click", function () {
+        var dropdownContent = document.getElementById(
+          "solutionsDropdownContent"
+        );
+        dropdownContent.classList.toggle("hidden");
+      });
+
+    window.addEventListener("click", function (event) {
+      var dropdownContent = document.getElementById("solutionsDropdownContent");
+      if (!event.target.matches("#solutionsDropdown")) {
+        if (!dropdownContent.classList.contains("hidden")) {
+          dropdownContent.classList.add("hidden");
+        }
+      }
+    });
+    document
+      .getElementById("resourcesDropdown")
+      .addEventListener("click", function () {
+        var dropdownContent = document.getElementById(
+          "resourcesDropdownContent"
+        );
+        dropdownContent.classList.toggle("hidden");
+      });
+
+    window.addEventListener("click", function (event) {
+      var dropdownContent = document.getElementById("resourcesDropdownContent");
+      if (!event.target.matches("#resourcesDropdown")) {
+        if (!dropdownContent.classList.contains("hidden")) {
+          dropdownContent.classList.add("hidden");
+        }
+      }
+    });
+  </script>
+
+</html>
